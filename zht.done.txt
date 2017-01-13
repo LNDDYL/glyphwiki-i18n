@@ -180,7 +180,7 @@ $TAB_NOTE = "ノート";
 $TAB_NOTE = "討論";
 :900
 $TAB_USER = "利用者ページ";
-$TAB_USER = "用戶頁面";
+$TAB_USER = "使用者頁面";
 :902
 $LABEL_RECENT = "履歴";
 $LABEL_RECENT = "歷史";
@@ -189,10 +189,10 @@ $LABEL_KAIWA = "会話";
 $LABEL_KAIWA = "對話";
 :904
 $LABEL_ANONYMOUS = "匿名利用者";
-$LABEL_ANONYMOUS = "匿名用戶";
+$LABEL_ANONYMOUS = "匿名使用者";
 :906
 $PREFIX_USER = "利用者";
-$PREFIX_USER = "用戶";
+$PREFIX_USER = "使用者";
 :907
 $PREFIX_KAIWA = "会話";
 $PREFIX_KAIWA = "對話";
@@ -210,13 +210,13 @@ my $subject = 'Password reminder from GlyphWiki (グリフウィキからのパ�
 my $subject = '來自字形維基的密碼提示郵件';
 :1132
 どなたか（$ip のIPアドレスの使用者）がグリフウィキ（http://glyphwiki.org/）
-來自IP地址 $1 的用戶（可能是您）
+來自IP地址 $1 的使用者（可能是您）
 :1133
 のログイン用パスワードの再発行を依頼しました。
 請求我們向您的郵箱發送新密碼。
 :1135
 利用者 "$name" のパスワードを "$temp_password" に変更しました。
-用戶“$name”的密碼現在變為了“$temp_password”。
+使用者“$name”的密碼現在變為了“$temp_password”。
 :1136
 ログインして別のパスワードに変更してください。
 請以此密碼登入並更換新密碼。
@@ -225,7 +225,7 @@ my $subject = 'GlyphWiki メールアドレスの確認';
 my $subject = '字形維基電子郵箱地址確認';
 :1491
 どなたか（IPアドレス $ip の使用者）がこのメールアドレスを
-來自IP地址 $ip 的用戶（可能是您）
+來自IP地址 $ip 的使用者（可能是您）
 :1492
 GlyphWiki のアカウント "$name" に登録しました。
 用這個郵箱地址註冊了一個賬戶 "$name"
@@ -240,7 +240,7 @@ GlyphWiki のアカウント "$name" に登録しました。
 請打開以下鏈接：
 :1500
 もし GlyphWiki について身に覚えがない場合は、リンクを開かないでください。
-如果不是您註冊的用戶，請不要點擊這個鏈接。
+如果不是您註冊的使用者，請不要點擊這個鏈接。
 :1501
 確認用コードは $expire に期限切れになります。
 驗證會在 $expire 失效。
@@ -425,10 +425,10 @@ $buffer .= qq|<div class="message">グリフデータ、または関連字にエ
 $buffer .= qq|<div class="message">字形數據有誤或者關聯字有誤（如還沒有此關聯字）。保存沒有成功，請檢查修改並確認後再次保存。您編輯的內容會在點擊"提交"時再次嘗試保存。</div>|;
 :351
 $buffer .= qq|<div class="message">あなたは<span class="notice">ログインしていません</span>。匿名利用者による投稿としてこの項目の履歴に記録されます。また、投稿の前には<span class="notice">プレビュー</span>が必要です。|;
-$buffer .= qq|<div class="message">您還沒有登入。不登入進行編輯會導致編輯記錄中署名為匿名用戶，並且您必須預覽一次才能提交。|;
+$buffer .= qq|<div class="message">您還沒有登入。不登入進行編輯會導致編輯記錄中署名為匿名使用者，並且您必須預覽一次才能提交。|;
 :353
 $buffer .= "匿名利用者は外部リンクを含むページを投稿することはできません。</div>";
-$buffer .= "匿名用戶不能提交含有外部鏈接的內容。</div>";
+$buffer .= "匿名使用者不能提交含有外部鏈接的內容。</div>";
 :362
 $buffer .= qq|<br><h2>プレビュー</h2><div class="warning2 notice">これはプレビューです。まだ保存されていません！</div><hr>|;
 $buffer .= qq|<br><h2>預覽</h2><div class="warning2 notice">請注意這只是預覽。所有修改都還沒有保存！</div><hr>|;
@@ -844,7 +844,7 @@ $byuser = " $cgi_user に";
 $byuser = " $cgi_user 作";
 :816
 $buffer .= qq|<div class="texts">以下は${now}までに${byuser}編集された <span class="notice">$pages</span> ページです。（<span class="notice">N</span>=新規項目、日時は日本時間）<br>|;
-$buffer .= qq|<div class="texts">以下是截至${now}前，用戶${byuser}編輯過的<span class="notice">$pages</span>個頁面。（<span class="notice">N</span>=新建項目，時間為日本時間）<br>|;
+$buffer .= qq|<div class="texts">以下是截至${now}前，使用者${byuser}編輯過的<span class="notice">$pages</span>個頁面。（<span class="notice">N</span>=新建項目，時間為日本時間）<br>|;
 :817
 $buffer .= qq(最近の <a href="/wiki/Special:Recentchanges?view=50$hidebots$hideanons$hideliu$hidemyself$hideauto$listtype$setuser">50</a> | <a href="/wiki/Special:Recentchanges?view=100$hidebots$hideanons$hideliu$hidemyself$hideauto$listtype$setuser">100</a> | <a href="/wiki/Special:Recentchanges?view=250$hidebots$hideanons$hideliu$hidemyself$hideauto$listtype$setuser">250</a> | <a href="/wiki/Special:Recentchanges?view=500$hidebots$hideanons$hideliu$hidemyself$hideauto$listtype$setuser">500</a> 件分を表示する<br>);
 $buffer .= qq(顯示最近的 <a href="/wiki/Special:Recentchanges?view=50$hidebots$hideanons$hideliu$hidemyself$hideauto$listtype$setuser">50</a> | <a href="/wiki/Special:Recentchanges?view=100$hidebots$hideanons$hideliu$hidemyself$hideauto$listtype$setuser">100</a> | <a href="/wiki/Special:Recentchanges?view=250$hidebots$hideanons$hideliu$hidemyself$hideauto$listtype$setuser">250</a> | <a href="/wiki/Special:Recentchanges?view=500$hidebots$hideanons$hideliu$hidemyself$hideauto$listtype$setuser">500</a> 次修改<br>);
@@ -859,16 +859,16 @@ $buffer .= qq(ボットの編集を<a href="/wiki/Special:Recentchanges?view=$li
 $buffer .= qq(<a href="/wiki/Special:Recentchanges?view=$limit&hidebots=1$hideanons$hideliu$hidemyself$hideauto$listtype$offset$offsetdir">隱藏</a>機器人編輯);
 :826
 $buffer .= qq(匿名利用者の編集を<a href="/wiki/Special:Recentchanges?view=$limit$hidebots&hideanons=0$hideliu$hidemyself$hideauto$listtype$offset$offsetdir">表示</a>);
-$buffer .= qq(<a href="/wiki/Special:Recentchanges?view=$limit$hidebots&hideanons=0$hideliu$hidemyself$hideauto$listtype$offset$offsetdir">顯示</a>匿名用戶);
+$buffer .= qq(<a href="/wiki/Special:Recentchanges?view=$limit$hidebots&hideanons=0$hideliu$hidemyself$hideauto$listtype$offset$offsetdir">顯示</a>匿名使用者);
 :828
 $buffer .= qq(匿名利用者の編集を<a href="/wiki/Special:Recentchanges?view=$limit$hidebots&hideanons=1$hideliu$hidemyself$hideauto$listtype$offset$offsetdir">隠す</a>);
-$buffer .= qq(<a href="/wiki/Special:Recentchanges?view=$limit$hidebots&hideanons=1$hideliu$hidemyself$hideauto$listtype$offset$offsetdir">隱藏</a>匿名用戶);
+$buffer .= qq(<a href="/wiki/Special:Recentchanges?view=$limit$hidebots&hideanons=1$hideliu$hidemyself$hideauto$listtype$offset$offsetdir">隱藏</a>匿名使用者);
 :832
 $buffer .= qq(登録利用者の編集を<a href="/wiki/Special:Recentchanges?view=$limit$hidebots$hideanons&hideliu=0$hidemyself$hideauto$listtype$offset$offsetdir">表示</a>);
-$buffer .= qq(<a href="/wiki/Special:Recentchanges?view=$limit$hidebots$hideanons&hideliu=0$hidemyself$hideauto$listtype$offset$offsetdir">顯示</a>註冊用戶);
+$buffer .= qq(<a href="/wiki/Special:Recentchanges?view=$limit$hidebots$hideanons&hideliu=0$hidemyself$hideauto$listtype$offset$offsetdir">顯示</a>註冊使用者);
 :834
 $buffer .= qq(登録利用者の編集を<a href="/wiki/Special:Recentchanges?view=$limit$hidebots$hideanons&hideliu=1$hidemyself$hideauto$listtype$offset$offsetdir">隠す</a>);
-$buffer .= qq(<a href="/wiki/Special:Recentchanges?view=$limit$hidebots$hideanons&hideliu=1$hidemyself$hideauto$listtype$offset$offsetdir">隱藏</a>註冊用戶);
+$buffer .= qq(<a href="/wiki/Special:Recentchanges?view=$limit$hidebots$hideanons&hideliu=1$hidemyself$hideauto$listtype$offset$offsetdir">隱藏</a>註冊使用者);
 :838
 $buffer .= qq(自分の編集を<a href="/wiki/Special:Recentchanges?view=$limit$hidebots$hideanons$hideliu&hidemyself=0$hideauto$listtype$offset$offsetdir">表示</a>);
 $buffer .= qq(<a href="/wiki/Special:Recentchanges?view=$limit$hidebots$hideanons$hideliu&hidemyself=0$hideauto$listtype$offset$offsetdir">顯示</a>我的編輯);
@@ -883,10 +883,10 @@ $buffer .= qq(自動編集を<a href="/wiki/Special:Recentchanges?view=$limit$hi
 $buffer .= qq(<a href="/wiki/Special:Recentchanges?view=$limit$hidebots$hideanons$hideliu$hidemyself&hideauto=1$listtype$offset$offsetdir$setuser">隱藏</a>自動編輯);
 :849
 $buffer .= "<br><form>利用者<input type=\"text\" name=\"user\" size=\"12\" value=\"$cgi_user\">の履歴を<input type=\"submit\" value=\"見る\">";
-$buffer .= "<br><form><input type=\"submit\" value=\"查看\">用戶<input type=\"text\" name=\"user\" size=\"12\" value=\"$cgi_user\">的編輯歷史";
+$buffer .= "<br><form><input type=\"submit\" value=\"查看\">使用者<input type=\"text\" name=\"user\" size=\"12\" value=\"$cgi_user\">的編輯歷史";
 :851
 $buffer .= " | <a href=\"?user=\">利用者指定の解除</a>";
-$buffer .= " | <a href=\"?user=\">解除用戶限制</a>";
+$buffer .= " | <a href=\"?user=\">解除使用者限制</a>";
 :860
 $buffer2 .= "<div class=\"texts\">（";
 $buffer2 .= "<div class=\"texts\">查看（";
@@ -1063,7 +1063,7 @@ $message_login .= "利用者名を正しく指定していません。<span clas
 $message_login .= "指定的使用者名稱不正確。<span class=\"small\">使用者名稱只能由英文字母、數字和“-”組成。</span>";
 :1495
 $message_login .= "\"$cgi_name\" という利用者は見当たりません。綴りが正しいことを再度確認するか、下記のフォームを使ってアカウントを作成してください。";
-$message_login .= "沒有名為“$cgi_name”的用戶。請檢查是否拼寫正確，或者在下面註冊一個新用戶";
+$message_login .= "沒有名為“$cgi_name”的使用者。請檢查是否拼寫正確，或者在下面註冊一個新使用者";
 :1497
 $message_login .= "パスワードを空にすることはできません。再度入力してください。";
 $message_login .= "請輸入密碼。";
@@ -1075,19 +1075,19 @@ $message_login .= "グリフウィキではログインにクッキーを使い�
 $message_login .= "字形維基使用Cookie記錄登入信息。您的瀏覽器不支持Cookie或者禁用了Cookie，請啟用後再登入。";
 :1503
 $message_login .= "利用者のアカウントは作成されましたが、ログインしていません。グリフウィキではログインにクッキーを使います。あなたはクッキーを無効な設定にしているようです。クッキーを有効にしてから作成した利用者名とパスワードでログインしてください。";
-$message_login .= "用戶已創建，但是無法登入。字形維基使用Cookie記錄登入信息。您的瀏覽器不支持Cookie或者禁用了Cookie，請啟用後再用使用者名稱和密碼登入。";
+$message_login .= "使用者已創建，但是無法登入。字形維基使用Cookie記錄登入信息。您的瀏覽器不支持Cookie或者禁用了Cookie，請啟用後再用使用者名稱和密碼登入。";
 :1513
 $message_login .= "メールの送信中にエラーが発生しました: 利用者 \"$cgi_name\" のメールアドレスは登録されていません。";
-$message_login .= "發送郵件失敗：用戶“$cgi_name”沒有登記郵箱地址。";
+$message_login .= "發送郵件失敗：使用者“$cgi_name”沒有登記郵箱地址。";
 :1516
 $message_login .= "メールの送信中にエラーが発生しました: 利用者 \"$cgi_name\" のメールアドレスはまだ確認されていません。";
-$message_login .= "發送郵件失敗：用戶“$cgi_name”的郵箱還沒有驗證。";
+$message_login .= "發送郵件失敗：使用者“$cgi_name”的郵箱還沒有驗證。";
 :1518
 $message_login .= "新しいパスワードは24時間以内に送信済みです。悪用防止のため、パスワードは24時間間隔で再発行可能となります。";
 $message_login .= "最近24小時發送過一次新密碼。為防止濫用，24小時內只允許發送一次新密碼。";
 :1523
 $message_login .= "新しいパスワードを \"$cgi_name\" さんの登録済みメールアドレスにお送りしました。メールを受け取ったら、再度ログインしてください。";
-$message_login .= "新密碼已發送到用戶“$cgi_name\”登記的郵箱。請查收並用新密碼登入。";
+$message_login .= "新密碼已發送到使用者“$cgi_name\”登記的郵箱。請查收並用新密碼登入。";
 :1533
 $message_login .= "その利用者名はすでに使われています。ほかの名前をお選びください。";
 $message_login .= "此使用者名稱已被使用，請嘗試其它使用者名稱。";
@@ -1102,7 +1102,7 @@ $message_login .= "確認コードが間違っているか入力されていま�
 $message_login .= "驗證代碼不正確或者是空的。";
 :1542
 $message_login .= "指定した名前 \"$cgi_name\" は既に存在しているアカウント \"$misleading_name\" と類似しているため使用できません。別の名前を使用してください。";
-$message_login .= "您輸入的使用者名稱“$cgi_name\”太像已有的用戶“$misleading_name”，不能使用。請嘗試其它使用者名稱。";
+$message_login .= "您輸入的使用者名稱“$cgi_name\”太像已有的使用者“$misleading_name”，不能使用。請嘗試其它使用者名稱。";
 :1550
 $message_login2 = "<p>グリフウィキに \"$cgi_name\" としてログインしました。</p>";
 $message_login2 = "<p>您現在已經以使用者名稱“$cgi_name”登入。</p>";
@@ -1165,7 +1165,7 @@ $base = "登入或註冊";
 <p>已有賬戶？<a href="/wiki/Special:Userlogin?type=loginfirst&returnto=$cgi_returnto" class="notice">在這裡登入</a></p>
 :1663
 <p>自動で実行されるスパム防止のため、利用者名を登録する際には下の画像に表示される単語を入力する必要があります:<br>
-<p>為防止自動創建賬戶發布垃圾信息，註冊用戶需要輸入以下圖像中的文字：<br>
+<p>為防止自動創建賬戶發布垃圾信息，註冊使用者需要輸入以下圖像中的文字：<br>
 :1664
 （<a href="/wiki/GlyphWiki:$URL_CAPTCHA">これは何ですか？</a>）</p>
 （<a href="/wiki/GlyphWiki:Captcha">這是什麼？</a>）</p>
