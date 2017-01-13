@@ -21,7 +21,7 @@ $temp2 = sprintf("作字率：%d\% [已%d、未%d]", int($implemented / ($unimpl
 &sql_do($dbh, "INSERT INTO wiki VALUES (DEFAULT, '$wikiname', COALESCE((SELECT max(version) FROM wiki WHERE name = '$wikiname'), 0) + 1, $time, '$user', '別名實體變更引起的自動更新', 0, '$old_buffer', '$ip', $current_related, 1)"); 
 :812
 $URL_USERNAME = &url_encode("ユーザー名");
-$URL_USERNAME = &url_encode("用戶名");
+$URL_USERNAME = &url_encode("使用者名稱");
 :813
 $URL_SANDBOX = &url_encode("サンドボックス");
 $URL_SANDBOX = &url_encode("沙盒");
@@ -1060,7 +1060,7 @@ $message_login .= "<div class=\"messagered\"><span class=\"notice\">ログイン
 $message_login .= "<div class=\"messagered\"><span class=\"notice\">登錄失敗：</span> ";
 :1492,1531
 $message_login .= "利用者名を正しく指定していません。<span class=\"small\">利用者名は 英小文字、数字、“-”からなります。</span>";
-$message_login .= "指定的用戶名不正確。<span class=\"small\">用戶名只能由英文字母、數字和“-”組成。</span>";
+$message_login .= "指定的使用者名稱不正確。<span class=\"small\">使用者名稱只能由英文字母、數字和“-”組成。</span>";
 :1495
 $message_login .= "\"$cgi_name\" という利用者は見当たりません。綴りが正しいことを再度確認するか、下記のフォームを使ってアカウントを作成してください。";
 $message_login .= "沒有名為“$cgi_name”的用戶。請檢查是否拼寫正確，或者在下面註冊一個新用戶";
@@ -1075,7 +1075,7 @@ $message_login .= "グリフウィキではログインにクッキーを使い�
 $message_login .= "字形維基使用Cookie記錄登錄信息。您的瀏覽器不支持Cookie或者禁用了Cookie，請啟用後再登錄。";
 :1503
 $message_login .= "利用者のアカウントは作成されましたが、ログインしていません。グリフウィキではログインにクッキーを使います。あなたはクッキーを無効な設定にしているようです。クッキーを有効にしてから作成した利用者名とパスワードでログインしてください。";
-$message_login .= "用戶已創建，但是無法登錄。字形維基使用Cookie記錄登錄信息。您的瀏覽器不支持Cookie或者禁用了Cookie，請啟用後再用用戶名和密碼登錄。";
+$message_login .= "用戶已創建，但是無法登錄。字形維基使用Cookie記錄登錄信息。您的瀏覽器不支持Cookie或者禁用了Cookie，請啟用後再用使用者名稱和密碼登錄。";
 :1513
 $message_login .= "メールの送信中にエラーが発生しました: 利用者 \"$cgi_name\" のメールアドレスは登録されていません。";
 $message_login .= "發送郵件失敗：用戶“$cgi_name”沒有登記郵箱地址。";
@@ -1090,7 +1090,7 @@ $message_login .= "新しいパスワードを \"$cgi_name\" さんの登録済�
 $message_login .= "新密碼已發送到用戶“$cgi_name\”登記的郵箱。請查收並用新密碼登錄。";
 :1533
 $message_login .= "その利用者名はすでに使われています。ほかの名前をお選びください。";
-$message_login .= "此用戶名已被使用，請嘗試其它用戶名。";
+$message_login .= "此使用者名稱已被使用，請嘗試其它使用者名稱。";
 :1535,1567
 $message_login .= "パスワードが短すぎます。1文字以上の文字列にしてください。";
 $message_login .= "您的密碼太短了，請輸入至少2個字元。";
@@ -1102,10 +1102,10 @@ $message_login .= "確認コードが間違っているか入力されていま�
 $message_login .= "驗證代碼不正確或者是空的。";
 :1542
 $message_login .= "指定した名前 \"$cgi_name\" は既に存在しているアカウント \"$misleading_name\" と類似しているため使用できません。別の名前を使用してください。";
-$message_login .= "您輸入的用戶名“$cgi_name\”太像已有的用戶“$misleading_name”，不能使用。請嘗試其它用戶名。";
+$message_login .= "您輸入的使用者名稱“$cgi_name\”太像已有的用戶“$misleading_name”，不能使用。請嘗試其它使用者名稱。";
 :1550
 $message_login2 = "<p>グリフウィキに \"$cgi_name\" としてログインしました。</p>";
-$message_login2 = "<p>您現在已經以用戶名“$cgi_name”登錄。</p>";
+$message_login2 = "<p>您現在已經以使用者名稱“$cgi_name”登錄。</p>";
 :1553
 $message_login = "<div class=\"messagegreen\">メールアドレスの正当性を確認するためのコードを含んだメールを送信しました。この確認を行わなくてもログインはできますが、確認するまでメール通知の機能は無効化されます。</div>";
 $message_login = "<div class=\"messagegreen\">含有驗證代碼的驗證郵件已經發送。不驗證郵箱不影響登錄，但是驗證之前不能使用郵箱通知功能。</div>";
@@ -1141,7 +1141,7 @@ $base = "登錄或註冊";
 <p>您必須啟用Cookie才能登錄。</p>
 :1636,1674
 <tr><td align="right">利用者名<td><input type="text" name="name" value="$temp_name">
-<tr><td align="right">用戶名：<td><input type="text" name="name" value="$temp_name">
+<tr><td align="right">使用者名稱：<td><input type="text" name="name" value="$temp_name">
 :1637,1675
 <tr><td align="right">パスワード<td><input type="password" name="password">
 <tr><td align="right">密碼：<td><input type="password" name="password">
@@ -1150,10 +1150,10 @@ $base = "登錄或註冊";
 <tr><td>&nbsp;<td><input id="remember" type="checkbox" name="savepassword" value="savepassword"> <label for="remember">記住我</label>
 :1646
 <li>利用者名とパスワードを入力して、<span class="notice">ログイン</span>をクリックしてください。
-<li>輸入用戶名和密碼後點擊<span class="notice">登錄</span>按鈕。
+<li>輸入使用者名稱和密碼後點擊<span class="notice">登錄</span>按鈕。
 :1647
 <li>パスワードを忘れてしまった場合は、利用者名を入力して<span class="notice">$BUTTON_NEW_PASSWORD</span>をクリックすることによりパスワードの再発行を受けられます（ただし、メールアドレスを登録していた場合に限られます）。
-<li>如果忘記了密碼，先輸入用戶名，再點擊<span class="notice">$BUTTON_NEW_PASSWORD</span>，即可通過電子郵件重設密碼（此前必須登記了郵箱）。
+<li>如果忘記了密碼，先輸入使用者名稱，再點擊<span class="notice">$BUTTON_NEW_PASSWORD</span>，即可通過電子郵件重設密碼（此前必須登記了郵箱）。
 :1648,1689
 <li>その他、ログインに関する情報は<a href="/wiki/GlyphWiki:$URL_LOGIN">GlyphWiki:$WORD_LOGIN</a>を参照してください。 
 <li>其他的、登錄相關的信息請參考<a href="/wiki/GlyphWiki:$URL_LOGIN">GlyphWiki:$WORD_LOGIN</a>處。 
@@ -1180,13 +1180,13 @@ $base = "登錄或註冊";
 <tr><td>&nbsp;<td><input type="submit" name="buttons" value="創建賬戶" class="notice">
 :1686
 <li>使用したい利用者名とパスワードを決めて入力し、<span class="notice">アカウント作成</span>をクリックしてください。
-<li>選擇一個想要的用戶名（不是郵箱地址）和安全的密碼，點擊<span class="notice">“創建賬戶”</span>即可。
+<li>選擇一個想要的使用者名稱（不是郵箱地址）和安全的密碼，點擊<span class="notice">“創建賬戶”</span>即可。
 :1687
 <li>作成したアカウントの削除はできません。
 <li>創建的賬戶不能刪除。
 :1688
 <li>利用者名には英小文字、数字と“-”が使えます。利用者名を決める際の注意点や詳細な解説は、<a href="/wiki/GlyphWiki:$URL_USERNAME">ユーザー名</a>を参照してください。
-<li>用戶名只能由英文字母、數字和“-”組成。詳細要求請參見<a href="/wiki/GlyphWiki:$URL_USERNAME">用戶名</a>。
+<li>使用者名稱只能由英文字母、數字和“-”組成。詳細要求請參見<a href="/wiki/GlyphWiki:$URL_USERNAME">使用者名稱</a>。
 :1697
 <h1>$cgi_name さん、ようこそ!</h1>
 <h1>歡迎，$cgi_name！</h1>
@@ -1198,7 +1198,7 @@ $base = "登錄或註冊";
 <h2>重設密碼</h2>
 :1722
 <tr><td align="right">利用者名:<td>$temp_name<input type="hidden" name="name" value="$temp_name"><input type="hidden" name="password" value="$temp_password">
-<tr><td align="right">用戶名：<td>$temp_name<input type="hidden" name="name" value="$temp_name"><input type="hidden" name="password" value="$temp_password">
+<tr><td align="right">使用者名稱：<td>$temp_name<input type="hidden" name="name" value="$temp_name"><input type="hidden" name="password" value="$temp_password">
 :1723
 <tr><td align="right">新しいパスワード:<td><input type="password" name="newpassword">
 <tr><td align="right">新密碼：<td><input type="password" name="newpassword">
