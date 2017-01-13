@@ -87,7 +87,7 @@ $URL_METADATA = &url_encode("メタ情報");
 $URL_METADATA = &url_encode("基本信息");
 :835
 $WORD_QUERY = "問い合わせ";
-$WORD_QUERY = "您搜索的是";
+$WORD_QUERY = "您搜尋的是";
 :836
 $WORD_EDITOR = "専用エディタで編集する";
 $WORD_EDITOR = "用字形編輯器編輯";
@@ -150,7 +150,7 @@ $WORD_PREVIEW = "プレビューを実行";
 $WORD_PREVIEW = "顯示預覽";
 :884
 $WORD_KENSAKU = "検索";
-$WORD_KENSAKU = "搜索";
+$WORD_KENSAKU = "搜尋";
 :888
 $WORD_HYOUJI = "表示";
 $WORD_HYOUJI = "查看";
@@ -283,10 +283,10 @@ $buffer .= qq|<li><a href="/wiki/GlyphWiki:$URL_IDOBATA">井戸端</a>|;
 $buffer .= qq|<li><a href="/wiki/GlyphWiki:$URL_IDOBATA">討論區</a>|;
 :46
 $buffer .= qq|検索|;
-$buffer .= qq|搜索|;
+$buffer .= qq|搜尋|;
 :54
 $buffer .= qq|<ul><li><a href="/search/hwr.html">手書き検索</a></ul>|;
-$buffer .= qq|<ul><li><a href="/search/hwr.html">手寫搜索</a></ul>|;
+$buffer .= qq|<ul><li><a href="/search/hwr.html">手寫搜尋</a></ul>|;
 :59
 $buffer .= qq|ツールボックス|;
 $buffer .= qq|工具箱|;
@@ -407,10 +407,10 @@ $buffer .= qq|<div class="warning">警告: あなたはこのページの古い�
 $buffer .= qq|<div class="warning">警告：您正在編輯一個舊版本。保存這篇文章會抹去新於此版本所作的所有改動。</div>|;
 :322
 $buffer .= qq|<div class="panel"><span class="warning">グリフウィキには現在この名前の項目はありません。</span><ul><li>グリフを新しく描くには、まず下のテキストボックスに内容を書き込んでください。その際、著作権に注意してください。その後、ページ下部の<span class="notice">■投稿する前に以下を確認して下さい■</span>以下の注意事項をよく確認した上で “$BUTTON_ACCEPT_AND_SUBMIT” ボタンを押してください。そうすればすぐに見えるようになります。<li>もしあなたがグリフウィキに初めて投稿するならば、先に<a href="/wiki/GlyphWiki:$URL_HOWTO">どうやって使うのか</a>を読んでください。<li><span class="notice">投稿のテストをしたい場合、<a href="/wiki/GlyphWiki:$URL_SANDBOX">サンドボックス</a>を利用してください。</span>一度作成した項目はあなたが削除することはできません。<li>他の項目から<a href="/wiki/Special:Search?action=fulltext&search=$url_db_wiki_name">&quot;$db_wiki_name&quot;を検索する</a>。</ul><hr><ul><li><span class="notice">この項目を作成したばかりなのにこのメッセージがでる場合、データベースの更新が遅れているために表示できないのかもしれません。</span>項目を書き直す前にしばらく待ってから、再読込してみてください。<li>以前この項目を作成したことがあるならば、この項目は<a href="/wiki/$URL_DELETE_LOG">既に削除されています</a>。<a href="/wiki/$URL_SAKUJO">$WORD_SAKUJO</a>に削除された理由が記載されているかもしれません。</ul></div>|;
-$buffer .= qq|<div class="panel"><span class="warning">字形維基目前還沒有這個名字的項目。</span><ul><li>在以下文字框中填入新字形的代碼。請注意勿侵犯著作權。此後請確認頁面下方的<span class="notice">提交前請確認以下事項</span>，確認後再點擊“$BUTTON_ACCEPT_AND_SUBMIT”按鈕。提交後可以立即看到結果。<li>如果您還沒有在字形維基上提交過，請先閱讀<a href="/wiki/GlyphWiki:$URL_HOWTO">使用教程</a>。<li><span class="notice">如果只是做測試，請使用<a href="/wiki/GlyphWiki:$URL_SANDBOX">沙盒</a>。</span>此條目一旦新建，就不能被您完全刪除。<li>請先在其他項目<a href="/wiki/Special:Search?action=fulltext&search=$url_db_wiki_name">&quot;$db_wiki_name&quot;搜索</a>避免重複。</ul><hr><ul><li><span class="notice">如果您剛剛創建了本條目，卻出現了此消息，可能是因為數據庫更新需要一點時間而不能立即反映。</span>請稍等後再刷新。<li>如果以前創建過這個條目，則它<a href="/wiki/$URL_DELETE_LOG">已經被刪除</a>。請在<a href="/wiki/$URL_SAKUJO">$WORD_SAKUJO</a>查看被刪除的原因。</ul></div>|;
+$buffer .= qq|<div class="panel"><span class="warning">字形維基目前還沒有這個名字的項目。</span><ul><li>在以下文字框中填入新字形的代碼。請注意勿侵犯著作權。此後請確認頁面下方的<span class="notice">提交前請確認以下事項</span>，確認後再點擊“$BUTTON_ACCEPT_AND_SUBMIT”按鈕。提交後可以立即看到結果。<li>如果您還沒有在字形維基上提交過，請先閱讀<a href="/wiki/GlyphWiki:$URL_HOWTO">使用教程</a>。<li><span class="notice">如果只是做測試，請使用<a href="/wiki/GlyphWiki:$URL_SANDBOX">沙盒</a>。</span>此條目一旦新建，就不能被您完全刪除。<li>請先在其他項目<a href="/wiki/Special:Search?action=fulltext&search=$url_db_wiki_name">&quot;$db_wiki_name&quot;搜尋</a>避免重複。</ul><hr><ul><li><span class="notice">如果您剛剛創建了本條目，卻出現了此消息，可能是因為數據庫更新需要一點時間而不能立即反映。</span>請稍等後再刷新。<li>如果以前創建過這個條目，則它<a href="/wiki/$URL_DELETE_LOG">已經被刪除</a>。請在<a href="/wiki/$URL_SAKUJO">$WORD_SAKUJO</a>查看被刪除的原因。</ul></div>|;
 :324
 $buffer .= qq|<div class="panel"><span class="warning">グリフウィキには現在この名前の項目はありません。</span><ul><li>文章を新しく作成するには、まず下のテキストボックスに内容を書き込んでください。その際、著作権に注意してください。その後、ページ下部の<span class="notice">■投稿する前に以下を確認して下さい■</span>以下の注意事項をよく確認した上で “$BUTTON_ACCEPT_AND_SUBMIT” ボタンを押してください。そうすればすぐに見えるようになります。<li>もしあなたがグリフウィキに初めて投稿するならば、先に<a href="/wiki/GlyphWiki:$URL_HOWTO">どうやって使うのか</a>を読んでください。<li><span class="notice">投稿のテストをしたい場合、<a href="/wiki/GlyphWiki:$URL_SANDBOX">サンドボックス</a>を利用してください。</span>一度作成した項目はあなたが削除することはできません。<li>他の項目から<a href="/wiki/Special:Search?action=fulltext&search=$url_db_wiki_name">&quot;$db_wiki_name&quot;を検索する</a>。</ul><hr><ul><li><span class="notice">この項目を作成したばかりなのにこのメッセージがでる場合、データベースの更新が遅れているために表示できないのかもしれません。</span>項目を書き直す前にしばらく待ってから、再読込してみてください。<li>以前この項目を作成したことがあるならば、この項目は<a href="/wiki/$URL_DELETE_LOG">既に削除されています</a>。<a href="/wiki/$URL_SAKUJO">$WORD_SAKUJO</a>に削除された理由が記載されているかもしれません。</ul></div>|;
-$buffer .= qq|<div class="panel"><span class="warning">字形維基目前還沒有這個名字的項目。</span><ul><li>在以下文字框中填入新文章。請注意勿侵犯著作權。此後請確認頁面下方的<span class="notice">提交前請確認以下事項</span>，確認後再點擊“$BUTTON_ACCEPT_AND_SUBMIT”按鈕。提交後可以立即看到結果。<li>如果您還沒有在字形維基上提交過，請先閱讀<a href="/wiki/GlyphWiki:$URL_HOWTO">使用教程</a>。<li><span class="notice">如果只是做測試，請使用<a href="/wiki/GlyphWiki:$URL_SANDBOX">沙盒</a>。</span>此條目一旦新建，就不能被您完全刪除。<li>請先在其他項目<a href="/wiki/Special:Search?action=fulltext&search=$url_db_wiki_name">&quot;$db_wiki_name&quot;搜索</a>避免重複。</ul><hr><ul><li><span class="notice">如果您剛剛創建了本條目，卻出現了此消息，可能是因為數據庫更新需要一點時間而不能立即反映。</span>請稍等後再刷新。<li>如果以前創建過這個條目，則它<a href="/wiki/$URL_DELETE_LOG">已經被刪除</a>。請在<a href="/wiki/$URL_SAKUJO">$WORD_SAKUJO</a>查看被刪除的原因。</ul></div>|;
+$buffer .= qq|<div class="panel"><span class="warning">字形維基目前還沒有這個名字的項目。</span><ul><li>在以下文字框中填入新文章。請注意勿侵犯著作權。此後請確認頁面下方的<span class="notice">提交前請確認以下事項</span>，確認後再點擊“$BUTTON_ACCEPT_AND_SUBMIT”按鈕。提交後可以立即看到結果。<li>如果您還沒有在字形維基上提交過，請先閱讀<a href="/wiki/GlyphWiki:$URL_HOWTO">使用教程</a>。<li><span class="notice">如果只是做測試，請使用<a href="/wiki/GlyphWiki:$URL_SANDBOX">沙盒</a>。</span>此條目一旦新建，就不能被您完全刪除。<li>請先在其他項目<a href="/wiki/Special:Search?action=fulltext&search=$url_db_wiki_name">&quot;$db_wiki_name&quot;搜尋</a>避免重複。</ul><hr><ul><li><span class="notice">如果您剛剛創建了本條目，卻出現了此消息，可能是因為數據庫更新需要一點時間而不能立即反映。</span>請稍等後再刷新。<li>如果以前創建過這個條目，則它<a href="/wiki/$URL_DELETE_LOG">已經被刪除</a>。請在<a href="/wiki/$URL_SAKUJO">$WORD_SAKUJO</a>查看被刪除的原因。</ul></div>|;
 :331
 $buffer .= qq|<div class="message">あなたがこのページを編集し始めた後に、他の誰かがこのページ(またはこのページの別の版)を変更しました。左のグリフが現在の最新の状態です。あなたの編集していたグリフは右側に示されていますので再度編集して下さい。あなたの編集した内容は、"投稿する"をクリックした時に実際に保存されます。</div>|;
 $buffer .= qq|<div class="message">有其他人在你開始編輯後修改了這個頁面。左邊是該字形最新的狀態，右邊是您編輯的字形。您需要重新編輯這個字形，再次點擊“保存頁面”才會保存。</div>|;
@@ -623,7 +623,7 @@ $buffer .= qq|<div class="panel"><span class="warning">この名前は<a href="/
 $buffer .= qq|<div class="panel"><span class="warning">這個名字可能沒有遵循<a href="/wiki/GlyphWiki:$URL_GUIDE">命名規範</a>。請確認或者修正。</span><ul><li>baseparts- 前綴已經停用</ul></div>|;
 :1219
 $buffer .= qq|<div class="panel"><span class="warning">グリフウィキには現在この名前の項目はありません。</span><ul><li><a href="/wiki/$url_db_wiki_name?action=edit" class="recommend">&quot;$db_wiki_name&quot;という項目を新規作成する</a>。または<a href="/wiki/GlyphWiki:$URL_SEISAKUIRAI">制作依頼</a>する。<li>既存の項目から<a href="/wiki/Special:Search?action=fulltext&search=$url_db_wiki_name">&quot;$db_wiki_name&quot;を検索する</a>。</ul><hr><ul><li>もしこの項目を作成したことがあるのにこのメッセージがでる場合、データベースの更新が遅れているために表示できないか、既に削除されています（<a href="/wiki/$URL_SAKUJO">$WORD_SAKUJO</a>に削除された理由が記載されているかもしれません）。<a href="/wiki/$URL_DELETE_LOG">$WORD_DELETE_LOG</a>も確認してください。</ul></div>|;
-$buffer .= qq|<div class="panel"><span class="warning">字形維基還沒有收錄這個名字的項目。</span><ul><li><a href="/wiki/$url_db_wiki_name?action=edit" class="recommend">&quot;$db_wiki_name&quot;創建本項目</a>。請參考<a href="/wiki/GlyphWiki:$URL_SEISAKUIRAI">製作要求</a>。<li>請先在已有的項目中<a href="/wiki/Special:Search?action=fulltext&search=$url_db_wiki_name">&quot;$db_wiki_name&quot;搜索</a>。</ul><hr><ul><li>如果您剛剛創建了本條目，卻出現了此消息，可能是因為數據庫更新需要一點時間而不能立即反映。請稍等後再刷新。也有可能是因為被刪除（<a href="/wiki/$URL_SAKUJO">$WORD_SAKUJO</a>記載了刪除理由）。以及參考<a href="/wiki/$URL_DELETE_LOG">$WORD_DELETE_LOG</a>。</ul></div>|;
+$buffer .= qq|<div class="panel"><span class="warning">字形維基還沒有收錄這個名字的項目。</span><ul><li><a href="/wiki/$url_db_wiki_name?action=edit" class="recommend">&quot;$db_wiki_name&quot;創建本項目</a>。請參考<a href="/wiki/GlyphWiki:$URL_SEISAKUIRAI">製作要求</a>。<li>請先在已有的項目中<a href="/wiki/Special:Search?action=fulltext&search=$url_db_wiki_name">&quot;$db_wiki_name&quot;搜尋</a>。</ul><hr><ul><li>如果您剛剛創建了本條目，卻出現了此消息，可能是因為數據庫更新需要一點時間而不能立即反映。請稍等後再刷新。也有可能是因為被刪除（<a href="/wiki/$URL_SAKUJO">$WORD_SAKUJO</a>記載了刪除理由）。以及參考<a href="/wiki/$URL_DELETE_LOG">$WORD_DELETE_LOG</a>。</ul></div>|;
 :1252
 $buffer .= qq|<h2>あなたのグリフ</h2>|;
 $buffer .= qq|<h2>您的字形</h2>|;
@@ -793,10 +793,10 @@ $buffer .= " 置き換え部品グリフ、配置調整指定：<input type=\"te
 $buffer .= " 替換的部件名、位置調整參數：<input type=\"text\" name=\"value\" size=\"60\" value=\"$cgi_value\">";
 :401,405
 $buffer .= qq|<div class="texts"><a href="?view=listup&target=$cgi_target&value=$cgi_value&offset=$prev">これより前の検索結果を見る</a></div>|;
-$buffer .= qq|<div class="texts"><a href="?view=listup&target=$cgi_target&value=$cgi_value&offset=$prev">查看之前的搜索結果</a></div>|;
+$buffer .= qq|<div class="texts"><a href="?view=listup&target=$cgi_target&value=$cgi_value&offset=$prev">檢視之前的搜尋結果</a></div>|;
 :409
 $buffer .= "<div class=\"texts\">さらに対象グリフが存在する可能性があります。<a href=\"?view=listup&target=$cgi_target&value=$cgi_value&offset=$next\">これ以降の対象グリフを見る</a></div>";
-$buffer .= "<div class=\"texts\">可能還有更多字形。<a href=\"?view=listup&target=$cgi_target&value=$cgi_value&offset=$next\">查看更多搜索結果</a></div>";
+$buffer .= "<div class=\"texts\">可能還有更多字形。<a href=\"?view=listup&target=$cgi_target&value=$cgi_value&offset=$next\">檢視更多搜尋結果</a></div>";
 :411
 $buffer .= "<hr><div class=\"texts\">ボタンをクリックすると「部品を更新する」にチェックをしたグリフをプレビューせずに一度に更新します。更新グリフの量が多いとブラウザが時間切れでエラーとなる場合がありますが、更新処理は問題なく実行できます。</div>";
 $buffer .= "<hr><div class=\"texts\">“用最新部件更新”被勾選的情況下，點擊按鈕之後，字形的預覽會全部更新一次。要更新的字形量很大的時候，瀏覽器可能會等待超時，顯示錯誤。但是實際上更新處理仍在進行，不會有問題</div>";
@@ -967,28 +967,28 @@ $buffer .= qq|<span class="text">このページには変更履歴がありま�
 $buffer .= qq|<span class="text">本頁面沒有變更歷史。</span>|;
 :1139
 $title = qq|検索|;
-$title = qq|搜索結果|;
+$title = qq|搜尋結果|;
 :1154
 $buffer .= qq|<span class="text">グリフウィキの検索についての詳しい情報は、<a href="/wiki/GlyphWiki:$URL_KENSAKU">GlyphWiki:$WORD_KENSAKU</a>をご覧下さい。</span><br><br>|;
-$buffer .= qq|<span class="text">閱讀更多關於搜索功能的細節：<a href="/wiki/GlyphWiki:$URL_KENSAKU">GlyphWiki:$WORD_KENSAKU</a></span><br><br>|;
+$buffer .= qq|<span class="text">閱讀更多關於搜尋功能的細節：<a href="/wiki/GlyphWiki:$URL_KENSAKU">GlyphWiki:$WORD_KENSAKU</a></span><br><br>|;
 :1158
 $buffer .= qq|<br><span class="query">（アルファベットの大文字と小文字は区別しません）</span></form>|;
 $buffer .= qq|<br><span class="query">（字母不區分大小寫）</span></form>|;
 :1168
 $buffer .= qq|<div class="texts">$temp 件目以降の検索結果です。<a href="?search=$query&fulltext=検索&offset=$prev">これより前の検索結果を見る</a></div>|;
-$buffer .= qq|<div class="texts">當前顯示第$temp個起的搜索結果。<a href="?search=$query&fulltext=検索&offset=$prev">查看上一頁搜索結果</a></div>|;
+$buffer .= qq|<div class="texts">當前顯示第$temp個起的搜尋結果。<a href="?search=$query&fulltext=検索&offset=$prev">查看上一頁搜尋結果</a></div>|;
 :1184
 $buffer .= qq|<div class="texts"><a href="?search=$query&fulltext=検索&offset=$prev">これより前の検索結果を見る</a></div>|;
-$buffer .= qq|<div class="texts"><a href="?search=$query&fulltext=検索&offset=$prev">顯示上一頁搜索結果</a></div>|;
+$buffer .= qq|<div class="texts"><a href="?search=$query&fulltext=検索&offset=$prev">顯示上一頁搜尋結果</a></div>|;
 :1188
 $buffer .= qq|<div class="texts">さらに検索結果がある可能性があります。<a href="?search=$query&fulltext=検索&offset=$next">これ以降の検索結果を見る</a></div>|;
-$buffer .= qq|<div class="texts">還有更多結果。<a href="?search=$query&fulltext=検索&offset=$next">顯示下一頁搜索結果</a></div>|;
+$buffer .= qq|<div class="texts">還有更多結果。<a href="?search=$query&fulltext=検索&offset=$next">顯示下一頁搜尋結果</a></div>|;
 :1192
 $buffer .= qq|<br><span class="text">該当するページが見つかりませんでした。|;
 $buffer .= qq|<br><span class="text">找不到此頁面。|;
 :1194
 $buffer .= "検索キーワードは2文字以上である必要があります。";
-$buffer .= "搜索關鍵字必須大於2個字符。";
+$buffer .= "搜尋關鍵字必須大於2個字元。";
 :1271
 $message .= "<div class=\"texts\"><p>あなたのメールアドレスは確認されました。ログインしてウィキを使用できます。</p><p><a href=\"/wiki/Special:Userlogin\">ログイン</a></p></div>";
 $message .= "<div class=\"texts\"><p>您的電子郵箱地址已驗證。現在就可以登錄使用字形維基了。</p><p><a href=\"/wiki/Special:Userlogin\">log in</a></p></div>";
@@ -1093,7 +1093,7 @@ $message_login .= "その利用者名はすでに使われています。ほか�
 $message_login .= "此用戶名已被使用，請嘗試其它用戶名。";
 :1535,1567
 $message_login .= "パスワードが短すぎます。1文字以上の文字列にしてください。";
-$message_login .= "您的密碼太短了，請輸入至少2個字符。";
+$message_login .= "您的密碼太短了，請輸入至少2個字元。";
 :1537,1569
 $message_login .= "両方のパスワードが一致しません。";
 $message_login .= "兩次密碼不一致。";
